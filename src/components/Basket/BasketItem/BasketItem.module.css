@@ -1,0 +1,113 @@
+/** @format */
+
+.container {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 10px 0;
+}
+
+.productImage {
+	width: 140px;
+	height: 180px;
+	border-radius: 8px;
+	border: 1px solid black;
+	margin-right: 10px;
+	margin-left: 10px;
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.container h1 {
+	font-size: 22px;
+	color: rgb(42, 9, 74);
+	margin-left: 10px;
+}
+
+.buttons {
+	margin-right: 15px;
+	display: flex;
+	flex-direction: column;
+}
+.container button {
+	width: 150px;
+	height: 30px;
+	border-radius: 8px;
+	font-weight: 900;
+}
+.amountContainer {
+	display: flex;
+	align-items: center;
+}
+
+.editButton {
+	background-color: transparent;
+	margin-left: 10px;
+	width: 50px !important;
+	height: 50px !important;
+	margin-left: 50px;
+	padding: 0 !important;
+}
+.editButton:hover {
+	width: 52px !important;
+	height: 52px !important;
+}
+.editButton img {
+	width: 100%;
+	height: 100%;
+	border: none !important;
+	margin: 0 !important;
+}
+.buttons button:last-child {
+	background-color: transparent;
+	padding: 0 !important;
+	margin-right: 50px;
+	border-radius: 50% !important;
+	width: 70px !important;
+	height: 70px !important;
+}
+
+.buttons button:last-child img {
+	margin: 0 !important;
+	border-radius: 50%;
+	width: 100%;
+	height: 100%;
+	border: none !important;
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.buttons button:last-child:hover {
+	width: 72px !important;
+	height: 72px !important;
+}
+.saveButton {
+	background-color: rgb(11, 171, 11) !important;
+	color: white !important;
+	margin-left: 10px;
+}
+
+.saveButton:hover {
+	box-shadow: 0 7px 14px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+	background-color: rgb(43, 193, 43) !important;
+}
+.basketInput {
+	width: 50px;
+	height: 28px;
+	background-color: rgb(154, 90, 215);
+	border: none;
+	border-radius: 8px;
+	color: white;
+	text-align: center;
+	font-weight: 700;
+	font-size: 18px;
+}
+
+.basketInput::-webkit-inner-spin-button,
+.basketInput::-webkit-outer-spin-button {
+	margin: 5px 0;
+	height: 30px;
+	background-color: blueviolet;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+	opacity: 0.5;
+}

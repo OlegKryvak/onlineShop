@@ -1,0 +1,21 @@
+/** @format */
+
+.container > div {
+	display: flex;
+	flex-direction: column;
+	margin-top: 10px;
+}
+.container > div input {
+	margin-top: 5px;
+}
+
+.select {
+	display: flex;
+	width: 300px;
+}
+
+.select > div {
+	width: 100%;
+
+	cursor: pointer;
+}

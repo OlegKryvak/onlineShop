@@ -1,0 +1,65 @@
+/** @format */
+@keyframes float {
+	from {
+		transform: rotate(0deg);
+		width: 300px;
+		height: 300px;
+		border-radius: 50%;
+		margin-left: 35%;
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+.container {
+	position: fixed;
+	background-color: white;
+	width: 100%;
+	height: 300px;
+	position: absolute;
+	top: 0;
+	z-index: 20;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 8px;
+	animation: float 1s ease-in-out;
+}
+.container h1 {
+	color: tomato;
+	text-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.buttons button {
+	width: 100px;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 8px;
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+	color: white;
+	font-size: 20px;
+	font-weight: 800;
+}
+.buttons button:hover {
+	box-shadow: 0 7px 14px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.buttons button:first-child {
+	background-color: rgb(11, 171, 11);
+}
+.buttons button:last-child {
+	background-color: red;
+}
+
+.containerBackground {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(211, 137, 215);
+	overflow: hidden;
+	z-index: 19;
+	opacity: 0.4;
+	cursor: pointer;
+}

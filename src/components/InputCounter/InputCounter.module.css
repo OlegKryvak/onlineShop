@@ -1,0 +1,16 @@
+/** @format */
+
+.container button {
+	width: 50px !important;
+}
+
+.container button:first-child {
+	background-color: rgb(182, 27, 27) !important;
+}
+.container button:last-child {
+	background-color: rgb(16, 142, 10) !important;
+}
+
+.container span {
+	margin: 0 10px;
+}

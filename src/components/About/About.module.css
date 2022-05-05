@@ -1,0 +1,42 @@
+/** @format */
+
+.container {
+	height: 100vh;
+	padding-top: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.container img {
+	width: 300px;
+	border-radius: 50%;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.container > div {
+	display: flex;
+
+	margin: 20px 0 0 250px;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.container > div > div:first-child {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.container > div > div:last-child {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-left: 20px;
+}
+
+.container > div span {
+	font-size: 25px;
+	color: rgb(154, 90, 215);
+}
+.container > div b {
+	font-size: 25px;
+	color: rgb(11, 171, 11);
+}

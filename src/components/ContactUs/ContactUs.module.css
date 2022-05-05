@@ -1,0 +1,9 @@
+/** @format */
+
+.container {
+	height: 100vh;
+	padding-top: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}

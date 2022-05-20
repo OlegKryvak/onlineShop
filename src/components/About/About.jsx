@@ -2,8 +2,12 @@
 
 import styles from "./About.module.css";
 import profileImage from "../../assets/images/profileimage.jpg";
+import { useEffect } from "react";
 
 const About = () => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 	return (
 		<div className={styles.container}>
 			<img src={profileImage} alt='profile avatar' />

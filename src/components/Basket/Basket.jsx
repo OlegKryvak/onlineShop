@@ -1,9 +1,8 @@
 /** @format */
 
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { itemsActions } from "../../app/store";
 import styles from "./Basket.module.css";
 import BasketItem from "./BasketItem/BasketItem";
 import OrderConfirmation from "./OrderConfirmation/OrderConfirmation";
@@ -15,14 +14,13 @@ const Basket = ({ closeBasket }) => {
 	const [isOrderConfirmed, setIsOrderConfirmed] = useState(false);
 	const itemsInBasket = useSelector((state) => state.itemsInBasket);
 	const totalAmount = useSelector((state) => state.totalAmount);
-	const dispatch = useDispatch();
 
 	const showOrderConfirmationHandler = () => {
 		setShowOrderConfirmation(true);
 	};
 
 	const makeOrderHandler = () => {
-		dispatch(itemsActions.makeOrder());
+		// dispatch(itemsActions.makeOrder());
 		history("/order");
 		closeBasket();
 	};

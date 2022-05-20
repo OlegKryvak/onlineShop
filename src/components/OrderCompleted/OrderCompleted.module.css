@@ -1,0 +1,84 @@
+/** @format */
+.container {
+	height: 100vh;
+	padding-top: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow-x: hidden;
+}
+
+.link {
+	color: white;
+	font-weight: 700;
+	margin: 10px;
+	width: 150px;
+	background-color: rgb(11, 171, 11);
+	text-align: center;
+	padding: 10px;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	box-shadow: 0 7px 14px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.link:hover {
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.link img {
+	width: 20px;
+	height: 20px;
+	border: none !important;
+	margin-right: 5px;
+}
+.thanks {
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+	margin-top: 100px;
+}
+.container h1 {
+	margin: 0;
+	background-color: blue;
+	width: 750px;
+	padding: 40px;
+	text-align: center;
+	color: yellow;
+	font-size: 40px;
+}
+.container h2 {
+	margin: 0;
+	background-color: yellow;
+	width: 750px;
+	padding: 40px;
+	text-align: center;
+	color: blue;
+	font-size: 35px;
+}
+
+@media screen and (max-width: 390px) {
+	.container {
+		padding-top: 70px;
+		width: 100%;
+	}
+
+	.thanks {
+		margin-top: 50px;
+	}
+	.container h1 {
+		margin: 0;
+		background-color: blue;
+		width: 100%;
+		padding: 40px 10px;
+		text-align: center;
+		color: yellow;
+		font-size: 30px;
+	}
+	.container h2 {
+		margin: 0;
+		background-color: yellow;
+		width: 90%;
+		padding: 40px 20px;
+		text-align: center;
+		color: blue;
+		font-size: 22px;
+	}
+}

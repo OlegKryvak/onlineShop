@@ -7,12 +7,13 @@ import { itemsActions } from "./app/store";
 import About from "./components/About/About";
 import Basket from "./components/Basket/Basket";
 import BasketBackground from "./components/BasketBackground/BasketBackground";
-import ContactUs from "./components/ContactUs/ContactUs";
+
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Items from "./components/Items/Items";
 import ProductSelected from "./components/Items/Product/ProductSelected/ProductSelected";
 import Order from "./components/Order/Order";
+import OrderCompleted from "./components/OrderCompleted/OrderCompleted";
 
 const App = () => {
 	const dispatch = useDispatch();
@@ -37,7 +38,7 @@ const App = () => {
 				<Route path='/product/:id' element={<ProductSelected />} />
 				<Route path='/order' element={<Order />} />
 				<Route path='/about' element={<About />} />
-				<Route path='/contact-us' element={<ContactUs />} />
+				<Route path='/order-completed' element={<OrderCompleted />} />
 			</Routes>
 
 			<Footer />

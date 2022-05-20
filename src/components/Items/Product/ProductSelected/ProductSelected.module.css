@@ -54,3 +54,48 @@
 	height: 20px;
 	border: none !important;
 }
+
+@media screen and (max-width: 390px) {
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 30px 0;
+	}
+
+	.container img {
+		width: 200px;
+		height: 250px;
+		margin-bottom: 10px;
+	}
+
+	.description button {
+		background-color: transparent;
+		width: 90%;
+		padding: 0;
+		font-size: 20px;
+	}
+
+	.container h1 {
+		margin: 0;
+		margin-left: 10px;
+		font-size: 20px;
+		color: rgb(9, 9, 82);
+		line-height: 30px;
+	}
+
+	.link {
+		color: white;
+		font-weight: 700;
+		margin: 0;
+		margin-right: 20px;
+		margin-bottom: 10px;
+	}
+
+	.link img {
+		margin-top: 10px;
+		width: 20px;
+		height: 20px;
+	}
+}

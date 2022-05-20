@@ -5,7 +5,7 @@
 	flex-direction: column;
 	align-items: center;
 	margin: 10px;
-	border: 1px dashed blue;
+	border: 1px dashed rgb(154, 90, 215);
 	border-radius: 8px;
 	padding: 10px;
 	box-shadow: 0 5px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -77,4 +77,10 @@
 
 .container div:last-child {
 	display: flex;
+}
+
+@media screen and (max-width: 390px) {
+	.container {
+		width: 89%;
+	}
 }

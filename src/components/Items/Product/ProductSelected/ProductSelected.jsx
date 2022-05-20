@@ -2,7 +2,7 @@
 
 import styles from "./ProductSelected.module.css";
 import { useSelector } from "react-redux";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import arrowLeft from "../../../../assets/icons/left-arrow.png";
 import VoteBar from "./VoteBar/VoteBar";
@@ -10,6 +10,9 @@ import VoteBar from "./VoteBar/VoteBar";
 const ProductSelected = () => {
 	let selectedProduct = useSelector((state) => state.selectedItem);
 	const [showFullDescription, setShowFullDescription] = useState(false);
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 	const showFullDescriptionHandler = () => {
 		setShowFullDescription((prev) => !prev);
 	};

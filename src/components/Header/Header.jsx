@@ -1,14 +1,15 @@
 /** @format */
 
 import { useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import home from "../../assets/icons/home.png";
 import basket from "../../assets/icons/basket.png";
 import styles from "./Header.module.css";
 const Header = ({ showBasketHandler }) => {
 	const totalAmount = useSelector((state) => state.totalAmount);
 	const productAmount = useSelector((state) => state.itemsInBasket);
-
+	const location = useLocation();
+	const history = useNavigate();
 	const calculateProductAmount = () => {
 		let count = 0;
 		productAmount.forEach((e) => {
@@ -19,9 +20,16 @@ const Header = ({ showBasketHandler }) => {
 
 	return (
 		<div className={styles.container}>
-			<NavLink to='/'>
-				<img src={home} alt='home' />
-			</NavLink>
+			{location.pathname !== "/order" && (
+				<button onClick={() => history("/")}>
+					<img src={home} alt='home' />
+				</button>
+			)}
+			{location.pathname === "/order" && (
+				<button onClick={() => history("/order")}>
+					<img src={home} alt='home' />
+				</button>
+			)}
 			<div>
 				<span className={styles.totalAmount}>{totalAmount.toFixed(2)} $</span>
 				<button onClick={showBasketHandler}>

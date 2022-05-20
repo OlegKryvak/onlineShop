@@ -6,6 +6,7 @@ import Product from "./Product/Product";
 import Loader from "../Loader/Loader";
 import Select from "react-select";
 import { itemsActions } from "../../app/store";
+import { useEffect } from "react";
 
 // const sortingByPrice = [
 // 	{ value: "ascending", label: "ascending" },
@@ -17,7 +18,9 @@ const Items = ({ showBasketHandler }) => {
 	const items = useSelector((state) => state.itemsList);
 	const categories = useSelector((state) => state.filterCategories);
 	const selectedCategory = useSelector((state) => state.selectedCategory);
-
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 	const selectCategoryHandler = (event) => {
 		const category = event.value;
 		dispatch(itemsActions.setSelectedCategory({ category }));
@@ -26,20 +29,6 @@ const Items = ({ showBasketHandler }) => {
 	const resetFilterHandler = () => {
 		dispatch(itemsActions.resetSelectedCategory());
 	};
-	// const sortingByPriceHandler = (event) => {
-	// 	const sortingPrice = event.value;
-	// 	let filteredProducts = [];
-	// 	if (sortingPrice === "ascending") {
-	// 		filteredProducts = items.sort((a, b) => (a.price > b.price ? 1 : -1));
-	// 		console.log(filteredProducts);
-	// 	}
-	// 	if (sortingPrice === "descending") {
-	// 		filteredProducts = items.sort((a, b) => b.price - a.price);
-	// 	}
-	// 	dispatch(itemsActions.setFilteredProducts({ filteredProducts }));
-
-	// 	setFiltered(true);
-	// };
 
 	return (
 		<div className={styles.container}>
@@ -52,7 +41,6 @@ const Items = ({ showBasketHandler }) => {
 							Reset all filters
 						</button>
 					)}
-					{/*  <Select placeholder='By price' onChange={sortingByPriceHandler} className={styles.select} options={sortingByPrice} />} */}
 				</div>
 			)}
 			<div>

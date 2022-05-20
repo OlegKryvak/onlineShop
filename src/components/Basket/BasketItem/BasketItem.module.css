@@ -6,8 +6,12 @@
 	align-items: center;
 	justify-content: space-between;
 	margin: 10px 0;
+	padding: 10px 0;
+	border-bottom: 1px rgb(154, 90, 215) dashed;
 }
-
+.container:last-child {
+	border: none;
+}
 .productImage {
 	width: 140px;
 	height: 180px;
@@ -110,4 +114,80 @@
 
 input[type="number"]::-webkit-inner-spin-button {
 	opacity: 0.5;
+}
+
+@media screen and (max-width: 390px) {
+	.container {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 20px;
+	}
+	.container > div:first-child {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.container:last-child {
+		border: none;
+	}
+	.productImage {
+		width: 140px;
+		height: 180px;
+		border-radius: 8px;
+		border: 1px solid black;
+		margin-right: 10px;
+		margin-left: 10px;
+		box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+	}
+
+	.container h1 {
+		font-size: 18px;
+		color: rgb(42, 9, 74);
+		margin-left: 10px;
+	}
+
+	.buttons {
+		margin: 0 !important;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.container button {
+		width: 150px;
+		height: 30px;
+		border-radius: 8px;
+		font-weight: 900;
+	}
+	.amountContainer {
+		display: flex;
+		align-items: center;
+	}
+
+	.buttons button:last-child {
+		margin-right: 0;
+		margin-top: 10px;
+	}
+
+	.buttons button:last-child img {
+		margin: 0 !important;
+		border-radius: 50%;
+		width: 100%;
+		height: 100%;
+		border: none !important;
+		box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+	}
+	.buttons button:last-child:hover {
+		width: 72px !important;
+		height: 72px !important;
+	}
+	.saveButton {
+		width: 70px !important;
+	}
+
+	.basketInput {
+		width: 70px;
+		height: 28px;
+	}
 }

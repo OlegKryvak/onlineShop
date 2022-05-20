@@ -5,10 +5,11 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 const initialState = {
 	itemsList: [],
 	filterCategories: [
-		{ value: "men's clothing", label: "men's clothing" },
-		{ value: "women's clothing", label: "women's clothing" },
-		{ value: "jewelery", label: "jewelery" },
-		{ value: "electronics", label: "electronics" },
+		{ value: "categories", label: "categories", isDisabled: true, isFixed: false },
+		{ value: "men's clothing", label: "men's clothing", isFixed: false },
+		{ value: "women's clothing", label: "women's clothing", isFixed: false },
+		{ value: "jewelery", label: "jewelery", isFixed: false },
+		{ value: "electronics", label: "electronics", isFixed: false },
 	],
 	selectedCategory: "",
 	totalAmount: 0,
@@ -33,7 +34,6 @@ const itemsSlice = createSlice({
 		selectProduct(state, action) {
 			state.selectedItem = [];
 			state.selectedItem = [action.payload.product];
-			//localStorage.setItem("selectedProduct", JSON.stringify(action.payload.product));
 		},
 		changeCountValueAdd(state, action) {
 			state.itemsList.forEach((item) => {
